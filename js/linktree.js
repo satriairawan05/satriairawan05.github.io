@@ -8,11 +8,13 @@ function animateTyping() {
 
     function type() {
         if (i < text.length) {
+            isDeleting = false;
             element.innerHTML += text.charAt(i);
             i++;
             setTimeout(type, Math.floor(Math.random() * 200) + 100); // Waktu penundaan antara pengetikan karakter yang berbeda
         } else {
-            setTimeout(resetTyping, 5000); // Waktu penundaan sebelum mereset efek pengetikan
+            isDeleting = true;
+            setTimeout(resetTyping, 1000); // Waktu penundaan sebelum mereset efek pengetikan
         }
 
         var currentText = text.substring(0, i);
