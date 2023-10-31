@@ -1,0 +1,32 @@
+:root {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+.typing {
+    overflow: hidden; /* Menghilangkan teks yang keluar dari kotak */
+    border-right: .15em solid #0d6efd; /* Garis imitasi pengetikan */
+    white-space: nowrap; /* Mencegah pemisahan kata */
+    margin: 0 auto; /* Posisi tengah horizontal */
+    letter-spacing: .15em; /* Jarak antar huruf */
+    animation:
+      typing 3.5s steps(40, end),
+      blink-caret .75s infinite;
+  }
+
+  /* Keyframes untuk animasi pengetikan */
+  @keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+  }
+
+  /* Keyframes untuk animasi caret (kursor) berkedip */
+  @keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: #0d6efd }
+  }
